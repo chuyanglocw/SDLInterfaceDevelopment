@@ -2,16 +2,19 @@
 #define SDLINTERFACE_HPP
 //头文件
 #include <SDL2/SDL.h>
-
-//避免main重复错误
-#undef main
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_mixer.h>
+#include <SDL2/SDL_net.h>
 
 class Game{
 public:
     static int WIDTH;
     static int HEIGHT;
     static void init();
+    static void render();
     static void eventloop();
+    static bool handle(SDL_Event&);
     static void dispose();
 };
 

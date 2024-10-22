@@ -1,5 +1,6 @@
 #include <base/SDLinterface.hpp>
-
+//避免main重复错误
+#undef main
 
 void init(){
     SDL_Init(SDL_INIT_EVERYTHING);
